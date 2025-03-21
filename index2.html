@@ -37,7 +37,7 @@
 
     .bubble {
       position: absolute;
-      bottom: -40px;
+      bottom: 0;
       background: rgba(255, 255, 255, 0.3);
       border-radius: 50%;
       animation: rise infinite ease-in;
@@ -121,7 +121,7 @@
     // Coral planting game
     const diver = document.getElementById("diver");
     const reef = document.getElementById("reef");
-    const coralIcons = ["🪸", "🦑", "🪼", "🧽", "🐚", "🐟", "🐡" "🦈"];
+    const coralIcons = ["🪸", "🦑", "🪼", "🧽", "🐚", "🐟", "🐡", "🦈"]; // Fixed missing comma
 
     diver.addEventListener("click", () => {
       const coral = document.createElement("div");
