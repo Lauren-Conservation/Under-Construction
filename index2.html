@@ -35,10 +35,9 @@
       50% { transform: translateY(-15px); }
     }
 
-    /* Bubble Styles */
     .bubble {
       position: absolute;
-      bottom: -40px;
+      bottom: 0;
       background: rgba(255, 255, 255, 0.3);
       border-radius: 50%;
       animation: rise infinite ease-in;
@@ -55,7 +54,6 @@
       }
     }
 
-    /* Coral Garden */
     #reef {
       margin-top: 30px;
       display: flex;
@@ -106,6 +104,8 @@
     const bubblesContainer = document.getElementById("bubbles");
     const totalBubbles = 30;
 
+    console.log("Creating bubbles..."); // Debugging message to see if bubbles are being created
+
     for (let i = 0; i < totalBubbles; i++) {
       const bubble = document.createElement("div");
       bubble.classList.add("bubble");
@@ -123,10 +123,13 @@
     // Coral planting game
     const diver = document.getElementById("diver");
     const reef = document.getElementById("reef");
-    const coralIcons = ["🪸", "🦑", "🪼", "🧽", "🐚", "🐟", "🐡", "🦈"]; // Added missing comma
+    const coralIcons = ["🪸", "🦑", "🪼", "🧽", "🐚", "🐟", "🐡", "🦈"];
 
-    // Diver Click Event
+    // Debugging message to check if diver click is being registered
+    console.log("Adding event listener to diver...");
+
     diver.addEventListener("click", () => {
+      console.log("Diver clicked!"); // Debugging to see if the click works
       const coral = document.createElement("div");
       coral.classList.add("coral");
       coral.textContent = coralIcons[Math.floor(Math.random() * coralIcons.length)];
@@ -138,10 +141,6 @@
         setTimeout(() => coral.remove(), 300); // Remove after shrinking
       });
     });
-  </script>
-</body>
-</html>
-
   </script>
 </body>
 </html>
